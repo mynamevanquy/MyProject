@@ -150,7 +150,6 @@ public ResponseEntity<?> updateUser(
             return ResponseEntity.status(HttpStatus.FORBIDDEN)
                     .body("Không có quyền chỉnh sửa tài khoản người khác :)");
         }
-        System.out.println("userDto.getUsername() = " + userDto.getUsername());
 
         Optional<User> existingUser = userRepository.findByUserName(userDto.getUsername());
         if (existingUser.isPresent() && !existingUser.get().getId().equals(userDto.getId())) {

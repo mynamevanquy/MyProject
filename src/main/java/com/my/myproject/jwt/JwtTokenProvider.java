@@ -12,8 +12,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import com.my.myproject.model.User;
-import com.my.myproject.repository.UserRepository;
+import com.my.myproject.model.user.User;
+import com.my.myproject.repository.user.UserRepository;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

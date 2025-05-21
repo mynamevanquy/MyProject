@@ -1,4 +1,4 @@
-package com.my.myproject.model;
+package com.my.myproject.model.user;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -15,14 +15,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController; 
+import org.springframework.web.bind.annotation.RestController;
+
 import com.my.myproject.dto.LoginDto;
 import com.my.myproject.dto.UserDto;
 import com.my.myproject.jwt.JWTAuthResponse;
-import com.my.myproject.model.Role;
-import com.my.myproject.model.User;
-import com.my.myproject.repository.RoleRepository;
-import com.my.myproject.repository.UserRepository;
+import com.my.myproject.model.user.Role;
+import com.my.myproject.model.user.User;
+import com.my.myproject.repository.user.RoleRepository;
+import com.my.myproject.repository.user.UserRepository;
 import com.my.myproject.service.AuthService;
 
 import lombok.AllArgsConstructor;
@@ -82,4 +83,9 @@ public class AuthController {
 		List<User> user = userRepository.findAll();
 		return new ResponseEntity<Object>(user,HttpStatus.OK);
 	}
+	
+//	public ResponseEntity<?> fogetPassword(){
+//		
+//	}
+	
 }
